@@ -2,7 +2,7 @@ name: Sync to Hugging Face Hub
 
 on:
   push:
-    branches: [ main ] # Se a sua branch principal for "master", troque para master
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -17,4 +17,3 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: git push --force https://andersonlcosta:$HF_TOKEN@huggingface.co/spaces/andersonlcosta/TUTTY-IA main
-
